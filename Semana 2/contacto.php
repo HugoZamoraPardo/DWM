@@ -40,7 +40,7 @@
             </div>
         </nav>       
         <!-- Container -->
-        <div class="container-fluid bg-warning">
+        <div class="container-fluid bg-light">
             <form action="empresa.php">
                 <div class="mb-3 mt-3">
                     <label for="email" class="form-label">Email:</label>
