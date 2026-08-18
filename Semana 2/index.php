@@ -42,7 +42,7 @@
         </nav>
 
         <!-- Container -->
-        <div class="container-fluid bg-warning">
+        <div class="container-fluid bg-light">
             <a href="empresa.php">Ir a Empresa</a><br>
             <a href="productos.php">Ir a Productos</a><br>
             <a href="servicios.php">Ir a Servicios</a><br>

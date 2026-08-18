@@ -71,7 +71,7 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -81,18 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
-                        <div class="card">
-                            <img class="card-img-top" src="img/iphone.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title">Iphone 16</h4>
-                                <p class="card-text">Ta bonito.</p>
-                                <a href="#" class="btn btn-primary">Ver características.</a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -102,7 +91,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -112,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -122,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -132,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -142,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -152,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
@@ -162,7 +151,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top" src="img/iphone.png" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Iphone 16</h4>
+                                <p class="card-text">Ta bonito.</p>
+                                <a href="#" class="btn btn-primary">Ver características.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="card">
                             <img class="card-img-top" src="img/iphone.png" alt="Card image">
                             <div class="card-body">
