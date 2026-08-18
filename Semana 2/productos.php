@@ -11,7 +11,7 @@
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <div class="container-fluid"> 
+            <div class="container"> 
                 <a class="navbar-brand" href="index.php"><i class="fa fa-apple"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -175,7 +175,7 @@
             </div>
         </div>
         <!-- Footer -->   
-        <div class="container-fluid bg-dark">
+        <div class="container bg-dark">
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4" style="color:white"><strong>MiEmpresa@2026</strong></div>
