@@ -50,16 +50,17 @@
                     <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
                 </div>
                 <!-- The slideshow/carousel -->
+               <!-- The slideshow/carousel -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="img/mac_neo.png" alt="Macbook Neo" class="d-block w-100">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="img/ipad.png" alt="Ipad" class="d-block w-100">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="img/watch.png" alt="Apple Watch" class="d-block w-100">
-                    </div>
+                   <div class="carousel-item active">
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRzxJcGpuU13dYi7W_Pztvd__aTPDtYqGu5lRjew-nZ7dwyqPnfNbV99K4tXl8jr0psZMXrmC7LodWFKjk" alt="Macbook" class="d-block w-100" style="object-fit: cover; height: 300px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcT_s6U7ekqyvnrDYgtGybstymVHQcHrlHtI11uqOAUcamv_78yLE2pNi-Vi3sjCTPjEqk7u_cUkvMvzrhg" alt="Ipad" class="d-block w-100" style="object-fit: cover; height: 300px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcR-OIMZSmKbcmY-2KFvr0b54nwlBA9DCRHrTOzDHRtVVtuqGdR-DNYI2LgZuX9fXdGRwNU6i00gFE3IIOQ" alt="Apple Watch" class="d-block w-100" style="object-fit: cover; height: 300px;">
+                </div>
                 </div>
                 <!-- Left and right controls/icons -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
