@@ -40,7 +40,7 @@
             </div>
         </nav>       
         <!-- Container -->
-        <div class="container-fluid bg-warning">
+        <div class="container-fluid bg-light">
             Hola Servicios<br>
             <a href="index.php">Volver</a>
         </div>
