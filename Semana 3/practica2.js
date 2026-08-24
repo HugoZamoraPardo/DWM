@@ -52,4 +52,4 @@ Object.entries(composicion2).forEach(([key, value]) => {
     Object.entries(value).forEach(([key, value]) => {
         console.log(`key: ${key}, value: ${value}`);
     });
-});
+}); 
