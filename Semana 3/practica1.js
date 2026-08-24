@@ -39,4 +39,4 @@ try { // Controlados Accepted, Reject, Except
     variable2 = variable2 + y;
 } catch (err) {
     console.log(`Error ${err}`);
-}
+} 
