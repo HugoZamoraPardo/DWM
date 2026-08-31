@@ -1,6 +1,6 @@
 let texto = document.createElement("input");
 texto.setAttribute("type","text");
-texto.setAttribute("value", "hola");
+texto.setAttribute("value", "hola"); 
 document.body.innerHTML = "";
 document.body.appendChild(texto);
 

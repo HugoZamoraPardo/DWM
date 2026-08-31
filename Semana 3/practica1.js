@@ -1,6 +1,6 @@
 // respuestaAPI = apicall(); // GET https://algo.cl/api/productos
 
-const respuestaAPI = {
+const respuestaAPI = { 
     "status": 200,
     "message" : "Productos obtenidos correctamente",
     "data": [
