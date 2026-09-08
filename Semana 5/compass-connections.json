@@ -1,0 +1,25 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "5b76adcc-e4f5-48e4-8400-9d28953aa55b",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1788832009774"
+        }
+      },
+      "favorite": {
+        "name": "Graphql",
+        "color": "color3"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {}
+      }
+    }
+  ]
+}
