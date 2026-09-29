@@ -1,0 +1,12 @@
+{
+    "user-token-002": {
+        "client_id": "user-client",
+        "role": "usuario",
+        "scopes": ["products:read"]
+    },
+    "admin-token-001": {
+        "client_id": "admin-client",
+        "role": "administrador",
+        "scopes": ["products:read", "products:write", "orders:read"]
+    }
+}

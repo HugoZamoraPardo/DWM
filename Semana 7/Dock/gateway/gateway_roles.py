@@ -17,8 +17,8 @@ from fastapi.security import (
 )
 
 app = FastAPI(
-    title="Secure Local API Gateway",
-    description="API Gateway con Vault y Bearer Token"
+    title="Secure Local API Gateway con roles",
+    description="API Gateway con Vault, Bearer Token, roles y scopes"
 )
 
 security = HTTPBearer(auto_error=False)
@@ -39,8 +39,8 @@ if not VAULT_TOKEN:
     raise RuntimeError("VAULT_TOKEN no configurado")
 
 
-async def get_gateway_secrets():
-    url = f"{VAULT_ADDR}/v1/secret/data/gateway"
+async def read_vault_secret(path: str):
+    url = f"{VAULT_ADDR}/v1/secret/data/{path}"
 
     headers = {
         "X-Vault-Token": VAULT_TOKEN
@@ -65,9 +65,7 @@ async def get_gateway_secrets():
             detail="No fue posible acceder a Vault"
         )
 
-    vault_response = response.json()
-
-    return vault_response["data"]["data"]
+    return response.json()["data"]["data"]
 
 
 async def authenticate_client(
@@ -79,35 +77,50 @@ async def authenticate_client(
             detail="Bearer token requerido"
         )
 
-    vault_secrets = await get_gateway_secrets()
+    clients = await read_vault_secret("gateway-clients")
 
-    expected_token = vault_secrets["client_token"]
     received_token = credentials.credentials
+    identity = None
 
-    valid = secrets.compare_digest(
-        received_token,
-        expected_token
-    )
+    for token, data in clients.items():
+        if secrets.compare_digest(received_token, token):
+            identity = data
 
-    if not valid:
+    if identity is None:
         raise HTTPException(
             status_code=401,
             detail="Token invalido"
         )
 
-    return {
-        "client_id": "student-client",
-        "backend_secret": vault_secrets[
-            "backend_shared_secret"
-        ]
-    }
+    return identity
+
+
+def required_scope(method: str, path: str):
+    resource = path.strip("/").split("/")[0]
+
+    if method in ("GET", "HEAD"):
+        action = "read"
+    else:
+        action = "write"
+
+    return f"{resource}:{action}"
+
+
+def authorize(identity: dict, method: str, path: str):
+    scope = required_scope(method, path)
+
+    if scope not in identity["scopes"]:
+        raise HTTPException(
+            status_code=403,
+            detail=f"Permiso insuficiente: se requiere {scope}"
+        )
 
 
 @app.get("/health")
 def health():
     return {
         "status": "OK",
-        "service": "API Gateway"
+        "service": "API Gateway con roles"
     }
 
 
@@ -118,15 +131,20 @@ def health():
 async def proxy(
     path: str,
     request: Request,
-    auth=Depends(authenticate_client)
+    identity=Depends(authenticate_client)
 ):
+    authorize(identity, request.method, path)
+
+    gateway_secrets = await read_vault_secret("gateway")
+
     target_url = f"{BACKEND_URL}/{path}"
 
     body = await request.body()
 
     gateway_headers = {
-        "X-Gateway-Secret": auth["backend_secret"],
-        "X-Authenticated-Client": auth["client_id"]
+        "X-Gateway-Secret": gateway_secrets["backend_shared_secret"],
+        "X-Authenticated-Client": identity["client_id"],
+        "X-Client-Role": identity["role"]
     }
 
     content_type = request.headers.get("content-type")
